@@ -2,7 +2,7 @@
 	<head>
 		
     <title>Aecore</title>
-    
+    <link rel="shortcut icon" href="{{{ asset('/css/img/logos/favicon.ico') }}}">
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 		<link href="{{ asset('/css/app-custom.css') }}" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
