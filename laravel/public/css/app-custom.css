@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: table;
+  font-weight: 100;
+  font-family: 'Open Sans', sans-serif;
+  background:#EEF0F3;
+}
+<<<<<<< HEAD
+
+/* Button & typography mods */
+.btn-spacer-left {
+  margin-left:8px;
+}
+.text-danger { color: #DA4B4B; }
+.bold { font-weight:bold; }
+.pointer { cursor:pointer; }
+
+=======
+      
+>>>>>>> c30b6609d3e2c78ca3d66f166c1505caccb22195
+/* Logos */
+.logo-lg {
+  width:300px;
+  height:68px;
+  margin:0 auto 50px auto;
+  background:url('img/logos/aecore-lg.svg') 0 0 no-repeat;
+  display:block;
+<<<<<<< HEAD
+}
+
+/* Top Bar */
+.navbar {
+  background:#FFF;
+  border-bottom:1px solid #ccc;
+  box-shadow: 0 1px 1px 0px hsla(0,0%,0%,.1);
+}
+.navbar-brand {
+  height:30px;
+  width:102px;
+  margin-top:10px;
+  background:url('img/logos/aecore-topbar.svg') 0 0 no-repeat;
+  display:inline-block;
+}
+@media (max-width: 767px) {
+  .navbar-brand {
+    height:30px;
+    width:30px;
+    margin-top:10px;
+    background:url('img/logos/aecore-icon.svg') 0 -30px no-repeat;
+    display:inline-block;
+  }
+}
+
+/* Top Bar Links */
+.navbar-nav > li > a {
+  padding:15px 10px 12px 10px;
+  color:#DA4B4B;
+  border-bottom:3px solid #FFF;
+}
+.navbar-nav > li > a.navbar-link:hover {
+  color:#DA4B4B;
+  border-bottom:3px solid #DA4B4B;
+  transition: border-color 0.2s linear;
+      -moz-transition: border-color 0.2s linear;    /* FF3.7+ */
+      -o-transition: border-color 0.2s linear;      /* Opera 10.5 */
+      -webkit-transition: border-color 0.2s linear; /* Saf3.2+, Chrome */
+}
+
+=======
+}
+>>>>>>> c30b6609d3e2c78ca3d66f166c1505caccb22195
