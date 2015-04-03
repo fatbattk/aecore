@@ -13,9 +13,8 @@ return [
 	|
 	*/
 
-	//'debug' => env('APP_DEBUG'),
-  'debug' => true,
-  
+	'debug' => env('APP_DEBUG'),
+
 	/*
 	|--------------------------------------------------------------------------
 	| Application URL
@@ -137,9 +136,6 @@ return [
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 
-    // Added
-    'Illuminate\Html\HtmlServiceProvider',     
-    
 		/*
 		 * Application Service Providers...
 		 */
@@ -196,10 +192,7 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
-      
-    //Added
-    'Form'      => 'Illuminate\Html\FormFacade',
-    'Html'      => 'Illuminate\Html\HtmlFacade',
-  ],
+
+	],
 
 ];
