@@ -1,9 +1,17 @@
-<?php namespace App\Http\Controllers;
+<?php
 
+namespace App\Http\Controllers;
+
+use App\Models\User;
+use App\Models\Company;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
+use Auth;
+use Session;
+use Hash;
+use DB;
 
 class UsersController extends Controller {
 
@@ -99,7 +107,7 @@ class UsersController extends Controller {
       } else {
         // no active account, either update status or create new
         $userdata = array(
-          'identifier' => BaseController::RandomString('10'),
+          'identifier' => FunctionsController::RandomString('10'),
           'email' => Input::get('email'),
           'password' => Hash::make(Input::get('password')),
           'name' => Input::get('name'),

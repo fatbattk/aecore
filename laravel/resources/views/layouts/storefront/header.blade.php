@@ -23,10 +23,10 @@
     <div class="collapse navbar-collapse" id="navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         @if (Auth::check())
-          <li><a href="logout" class="navbar-link" style="border:none;" title="Log Out" data-toggle="tooltip" data-placement="bottom"><span class="glyphicon glyphicon-log-out"></span></a></li> 
+          <li><a href="logout" class="navbar-link" title="" data-toggle="tooltip" data-placement="bottom">Log Out</a></li> 
         @else
-          <li><a href="signup" class="navbar-link bold" style="border-left:none;" title="It's easy!" data-toggle="tooltip" data-placement="bottom">Sign Up</a></li>
-          <li><a href="login" class="navbar-link" style="border-right:none;" title="" data-toggle="tooltip" data-placement="bottom">Log In</a></li>
+          <li><a href="signup" class="navbar-link bold" title="It's easy!" data-toggle="tooltip" data-placement="bottom">Sign Up</a></li>
+          <li><a href="login" class="navbar-link" title="" data-toggle="tooltip" data-placement="bottom">Log In</a></li>
         @endif
       </ul>
     </div>
