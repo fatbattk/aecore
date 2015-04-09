@@ -5,10 +5,9 @@ body {
   height: 100%;
   display: table;
   font-weight: 100;
-  font-family: 'Open Sans', sans-serif;
+  font-family: Aerial, Helvetica, sans-serif;
   background:#EEF0F3;
 }
-
 
 /* Button & typography mods */
 .btn-spacer-left {
@@ -36,7 +35,7 @@ body {
 .navbar-brand {
   height:30px;
   width:102px;
-  margin-top:10px;
+  margin:10px 10px 0 0;
   background:url('img/logos/aecore-topbar.svg') 0 0 no-repeat;
   display:inline-block;
 }
@@ -44,7 +43,7 @@ body {
   .navbar-brand {
     height:30px;
     width:30px;
-    margin-top:10px;
+    margin:10px 10px 0 0;
     background:url('img/logos/aecore-icon.svg') 0 -30px no-repeat;
     display:inline-block;
   }
@@ -63,4 +62,60 @@ body {
       -moz-transition: border-color 0.2s linear;    /* FF3.7+ */
       -o-transition: border-color 0.2s linear;      /* Opera 10.5 */
       -webkit-transition: border-color 0.2s linear; /* Saf3.2+, Chrome */
+}
+.navbar-nav > li > a.navbar-link-active {
+  color:#DA4B4B;
+  border-bottom:3px solid #F7F7F7;
+}
+
+/* Avatars */
+.avatar_upload {
+  margin-left:90px;
+}
+.avatar_xs {
+  width:20px;
+  height:20px;
+  margin:0 5px 0 0;
+  border-radius:2px;
+  float:left;
+}
+.avatar_sm {
+  width:34px;
+  height:34px;
+  margin:0 8px 0 0;
+  border-radius:3px;
+  float:left;
+}
+.avatar_md {
+  width:40px;
+  height:40px;
+  border-radius:3px;
+  float:left;
+}
+.avatar_lg {
+  width:75px;
+  height:75px;
+  border-radius:3px;
+  float:left;
+}
+.avatar_company {
+  width:32px;
+  height:32px;
+  margin-right:5px;
+  float:left;
+}
+.logo_company {
+  max-width:200px;
+  max-height:75px;
+  margin-bottom:15px;
+}
+
+@media (max-width: 767px) {
+  .navbar-username {
+    display:none;
+  }
+  .avatar_xs {
+    margin:0;
+    float:none;
+  }
 }

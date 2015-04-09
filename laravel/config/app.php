@@ -79,7 +79,7 @@ return [
 	|
 	*/
 
-	'key' => env('APP_KEY', 'SomeRandomString'),
+	'key' => env('APP_KEY', 'BbeGPshSHVQuJBvHRxeXaOdYnUrJ7YAV'),
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
@@ -137,9 +137,18 @@ return [
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 
-		// Added
+		// Added services
+    'Aws\Laravel\AwsServiceProvider',
+    'Barryvdh\Debugbar\ServiceProvider',
+    //'Camroncade\Timezone\TimezoneServiceProvider', // uses bridge
 		'Illuminate\Html\HtmlServiceProvider',
-	
+    'Intervention\Image\ImageServiceProvider',
+    'Intervention\Image\ImageServiceProvider',
+    'Monarobase\CountryList\CountryListServiceProvider',
+    'Morrislaptop\LaravelFivePackageBridges\ConfigServiceProvider', //bridge
+    'Morrislaptop\LaravelFivePackageBridges\Bridges\TimezoneServiceProvider',
+      
+      
 		/*
 		 * Application Service Providers...
 		 */
@@ -197,9 +206,14 @@ return [
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
 
-		//Added
+		//Added aliases
+    'AWS'       => 'Aws\Laravel\AwsFacade',
+    'Carbon'    => 'Carbon\Carbon',
+    'Countries' => 'Monarobase\CountryList\CountryListFacade',
+    'Debugbar'  => 'Barryvdh\Debugbar\Facade',
 		'Form'      => 'Illuminate\Html\FormFacade',
 		'Html'      => 'Illuminate\Html\HtmlFacade',
+    'Image'     => 'Intervention\Image\Facades\Image',
 	
 	],
 

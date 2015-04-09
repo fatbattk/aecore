@@ -11,8 +11,14 @@
 |
 */
 
-$app = new Illuminate\Foundation\Application(
-	realpath(__DIR__.'/../')
+//original code
+//$app = new Illuminate\Foundation\Application(
+//	realpath(__DIR__.'/../')
+//);
+
+// Bridge for laravel 4 compatible timezone package
+$app = new Morrislaptop\LaravelFivePackageBridges\Application(
+    realpath(__DIR__.'/../')
 );
 
 /*
