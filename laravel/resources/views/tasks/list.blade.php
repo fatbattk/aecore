@@ -1,6 +1,6 @@
 @extends('layouts.application.main_wide')
 @section('content')
-  <script type="text/javascript" src="{!! URL::asset('js/tasks.js') !!}"></script>
+  <script type="text/javascript" src="{!! URL::asset('/js/tasks.js') !!}"></script>
   <script type="text/javascript">
     $(function(){
       $('input[type=text][name=list_name]').tooltip({
@@ -27,7 +27,7 @@
       </li>
       @if(count($following) > 0)
         <br>
-        <?php $useravatar = new Useravatar; ?>
+        <?php $useravatar = new App\Models\Useravatar; ?>
         <li class="nav-header"><span class="glyphicon glyphicon-eye-open"></span> Following</li>
         @foreach($following AS $follow_data)
           <li id="li-list-{!! $follow_data->identifier !!}"><a href="/tasks/following/{!! $follow_data->identifier !!}" class="{!! Request::is('*'.$follow_data->identifier) ? 'active' : '' !!}"><img src="{!! $useravatar->getUserAvatar($follow_data->user_id, 'sm') !!}" class="avatar_xs" />{!! $follow_data->name !!}</a></li>
@@ -45,9 +45,9 @@
           <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">{!! Session::get('filter_text') !!} <span class="caret"></span></button>
           <ul class="dropdown-menu" role="menu">
             @if(Session::get('filter_text') == "Open Tasks")
-              <li>{!! HTML::link('/tasks/' . Session::get('listcode') .'?filter=complete', 'Completed Tasks') !!}</li>
+              <li><a href="{!! '/tasks/' . Session::get('listcode') . '?filter=complete' !!}">Completed Tasks</a>
             @else
-              <li>{!! HTML::link('/tasks/' . Session::get('listcode') .'?filter=active', 'Open Tasks') !!}</li>
+              <li><li><a href="{!! '/tasks/' . Session::get('listcode') . '?filter=active' !!}">Open Tasks</a>
             @endif
           </ul>
         </div>

@@ -1,5 +1,8 @@
 <?php
 
+  namespace App\Models;
+  use Illuminate\Database\Eloquent\Model;
+
   class Planset extends Model {
     
     protected $table = 'plansets';

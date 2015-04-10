@@ -1,5 +1,8 @@
 <?php
 
+  namespace App\Models;
+  use Illuminate\Database\Eloquent\Model;
+
   class S3file extends Model {
     
     //protected $table = 's3files';

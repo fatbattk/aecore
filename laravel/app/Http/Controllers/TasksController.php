@@ -1,6 +1,29 @@
 <?php
 
-class TasksController extends BaseController {
+  namespace App\Http\Controllers;
+
+  use Illuminate\Routing\Controller;
+  use Illuminate\Support\Facades\Validator;
+  use Illuminate\Support\Facades\Input;
+  use Illuminate\Support\Facades\Redirect;
+  use Auth;
+  use Carbon;
+  use DateTime;
+  use Timezone;
+  use Session;
+  use Hash;
+  use DB;
+
+  use App\Models\User;
+  use App\Models\Task;
+  use App\Models\Taskattachment;
+  use App\Models\Taskcomment;
+  use App\Models\Taskfollower;
+  use App\Models\Taskrefresh;
+  use App\Models\Tasklist;
+  use App\Models\Tasklisttask;
+
+class TasksController extends Controller {
   
   public function listTasks($listcode=NULL) {
     
@@ -208,7 +231,7 @@ class TasksController extends BaseController {
       return Redirect::to('tasks/'.Session::get('listcode'));
     } else {
       // Add task list
-      $listcode = BaseController::RandomString('10');
+      $listcode = FunctionsController::RandomString('10');
       $listdata = array (
         'listcode' => $listcode,
         'user_id' => Auth::User()->id,
@@ -249,7 +272,7 @@ class TasksController extends BaseController {
       
       // Get form data
       $task = array (
-        'code' => BaseController::RandomString('10'),
+        'code' => FunctionsController::RandomString('10'),
         'user_id' => Auth::User()->id,
         'created_by' => Auth::User()->id,
         'task' => Input::get('task'),
@@ -576,7 +599,7 @@ class TasksController extends BaseController {
               'tasklists' => $tasklists,
               'attachments' => $attachments,
               'activitys' => $activitys,
-              'basecontroller' => new BaseController
+              'functionscontroller' => new FunctionsController
             ));
   }
   

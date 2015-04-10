@@ -1,5 +1,25 @@
 <?php
 
+  namespace App\Http\Controllers;
+
+  use Illuminate\Routing\Controller;
+  use Illuminate\Support\Facades\Validator;
+  use Illuminate\Support\Facades\Input;
+  use Illuminate\Support\Facades\Redirect;
+  use Auth;
+  use Carbon;
+  use DateTime;
+  use Timezone;
+  use Session;
+  use Hash;
+  use DB;
+  use URL;
+  use Response;
+  use TCPDF;
+  
+  use App\Models\Companyavatar;
+  
+  
 class MYPDF extends TCPDF {
     
   //Page header
@@ -39,7 +59,7 @@ class MYPDF extends TCPDF {
   }
 }
 
-class PdfController extends BaseController {
+class PdfController extends Controller {
   
   public function pdfTaskList() {
     
@@ -105,7 +125,7 @@ class PdfController extends BaseController {
     foreach($tasks as $task) {
       $html = $html.'
         <tr>
-          <td style="width:12px;"><img src="' . URL::asset('images/sprites/checkbox.png') . '"/></td>
+          <td style="width:12px;"><img src="' . URL::asset('css/img/sprites/checkbox.png') . '"/></td>
           <td style="width:5px;"></td>
           <td style="width:515px;">' . $task->task . '</td>
         </tr>';

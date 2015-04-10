@@ -1,5 +1,12 @@
 <?php
 
+  namespace App\Models;
+  use Illuminate\Database\Eloquent\Model;
+
+  use App;
+  use DB;
+  use URL;
+  
   class Companyavatar extends Model {
     
     protected $table = 'companyavatars';
@@ -17,10 +24,10 @@
               ->where('companyavatars.company_id', '=', $id)
               ->first();
       if($image->id != null) {
-        $s3 = App::make('aws')->get('s3');
+        $s3 = AWS::get('s3');
         return $s3->getObjectUrl($image->file_bucket, $image->file_path . '/' . $image->file_name);
       } else {
-        return URL::asset('images/icons/company-avatar-60.png'); 
+        return URL::asset('css/img/icons/company-avatar-60.png'); 
       }
     }
     
@@ -30,11 +37,11 @@
               ->leftjoin('s3files', 'companyavatars.file_id_logo', '=', 's3files.id')
               ->where('companyavatars.company_id', '=', $id)
               ->first();
-      if($image->id != null) {
-        $s3 = App::make('aws')->get('s3');
+      if(count($image) > 0) {
+        $s3 = AWS::get('s3');
         return $s3->getObjectUrl($image->file_bucket, $image->file_path . '/' . $image->file_name);
       } else {
-        return URL::asset('images/logos/default.png'); 
+        return URL::asset('css/img/logos/aecore-default.png');
       }
     }
     

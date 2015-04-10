@@ -1,6 +1,16 @@
 <?php
 
-class TeamController extends BaseController {
+  namespace App\Http\Controllers;
+
+  use Illuminate\Routing\Controller;
+  use Illuminate\Support\Facades\Validator;
+  use Illuminate\Support\Facades\Input;
+  use Illuminate\Support\Facades\Redirect;
+  use Auth;  
+  use DB;
+  use Response;
+  
+class TeamController extends Controller {
 
   public function listTeam() {
     
@@ -111,7 +121,7 @@ class TeamController extends BaseController {
     } else {
       // Project
       $user_data = array (
-        'identifier' => BaseController::RandomString('10'),
+        'identifier' => Controller::RandomString('10'),
         'name' => Input::get('name'),
         'email' => Input::get('email'),
         'status' => 'static'
@@ -193,7 +203,7 @@ class TeamController extends BaseController {
     if(count($project) > 0) {
       // Insert list
       $list = array (
-        'code' => Basecontroller::RandomString('10'),
+        'code' => Controller::RandomString('10'),
         'project_id' => $project->id,
         'list_name' => Input::get('listname')
       );
@@ -267,7 +277,7 @@ class TeamController extends BaseController {
             ->with(array(
               'listinfo' => $listinfo,
               'members' => $members,
-              'basecontroller' => new BaseController
+              'Controller' => new Controller
             ));
     
   }

@@ -1,6 +1,20 @@
 <?php
 
-  class AutocompleteController extends BaseController {
+  namespace App\Http\Controllers;
+
+  use Illuminate\Routing\Controller;
+  use Illuminate\Support\Facades\Validator;
+  use Illuminate\Support\Facades\Input;
+  use Illuminate\Support\Facades\Redirect;
+  use Auth;  
+  use DB;
+  use Response;
+  
+  use App\Models\User;
+  use App\Models\Useravatar;
+  use App\Models\Companyavatar;
+  
+  class AutocompleteController extends Controller {
     
     public function Companies() {
       

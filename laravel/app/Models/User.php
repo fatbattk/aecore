@@ -40,7 +40,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
             ->first();
     
 //    if(count($image > 0)) {
-//      $s3 = App::make('aws')->get('s3');
+//      $s3 = AWS::get('s3');
 //      return $s3->getObjectUrl($image->file_bucket, $image->file_path . '/' . $image->file_name);
 //    } else {
 //      $hash = md5(strtolower(trim($this->attributes['email'])));

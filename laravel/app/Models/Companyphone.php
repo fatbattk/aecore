@@ -1,5 +1,8 @@
 <?php
 
+  namespace App\Models;
+  use Illuminate\Database\Eloquent\Model;
+
   class Companyphone extends Model {
     
     protected $table = 'companyphones';

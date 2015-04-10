@@ -1,6 +1,17 @@
 <?php
 
-class UploadsController extends BaseController {
+  namespace App\Http\Controllers;
+
+  use Illuminate\Routing\Controller;
+  use Illuminate\Support\Facades\Validator;
+  use Illuminate\Support\Facades\Input;
+  use Illuminate\Support\Facades\Redirect;
+  use Auth;
+  use DB;
+  use Response;
+  use Aws\S3\S3Client;
+  
+class UploadsController extends Controller {
 
   // Files
   public function uploadFile() {
@@ -9,7 +20,7 @@ class UploadsController extends BaseController {
     
     if(Input::hasFile('Filedata') && Input::get('token') == $verifyToken) {
       
-      require_once __DIR__ . '/../../vendor/autoload.php';
+      require_once __DIR__ . '/../../../vendor/autoload.php';
       
       // Get file size & temp location
       $file_location_temp = Input::file('Filedata')->getRealPath();
@@ -26,9 +37,16 @@ class UploadsController extends BaseController {
         $s3bucket = 'aecore-cdn';
         $s3path = Auth::User()->id . '/' . time();
 
+        // Instantiate the S3 client with your AWS credentials
+        $s3Client = S3Client::factory(array(
+            'credentials' => array(
+                'key'    => 'AKIAIPJ344NGVS4V3CZA',
+                'secret' => 'XF4j7IMmD1WjzVJ/u+efxWnY5QNBjMsC7uuKzGcs',
+            )
+        ));
+  
         // Upload the images to s3
-        $s3 = App::make('aws')->get('s3');
-        $s3->putObject(array(
+        $s3Client->putObject(array(
           'ACL'                 => 'public-read',
           'Bucket'              => $s3bucket,
           'ContentDisposition'  => 'attachment',
@@ -56,7 +74,7 @@ class UploadsController extends BaseController {
     
     if(Input::hasFile('Filedata') && Input::get('token') == $verifyToken) {
       
-      require_once __DIR__ . '/../../vendor/autoload.php';
+      require_once __DIR__ . '/../../../vendor/autoload.php';
       
       // Get file size & temp location
       $file_location_temp = Input::file('Filedata')->getRealPath();
@@ -73,9 +91,16 @@ class UploadsController extends BaseController {
         $s3bucket = 'aecore-cdn';
         $s3path = 'logos/'.Auth::User()->company_id;
 
+        // Instantiate the S3 client with your AWS credentials
+        $s3Client = S3Client::factory(array(
+            'credentials' => array(
+                'key'    => 'AKIAIPJ344NGVS4V3CZA',
+                'secret' => 'XF4j7IMmD1WjzVJ/u+efxWnY5QNBjMsC7uuKzGcs',
+            )
+        ));
+  
         // Upload the images to s3
-        $s3 = App::make('aws')->get('s3');
-        $s3->putObject(array(
+        $s3Client->putObject(array(
           'ACL'                 => 'public-read',
           'Bucket'              => $s3bucket,
           'ContentDisposition'  => 'attachment',
@@ -108,7 +133,7 @@ class UploadsController extends BaseController {
     
     if(Input::hasFile('Filedata') && Input::get('token') == $verifyToken) {
       
-      require_once __DIR__ . '/../../vendor/autoload.php';
+      require_once __DIR__ . '/../../../vendor/autoload.php';
       
       // Get file size & temp location
       $file_location_temp = Input::file('Filedata')->getRealPath();
@@ -177,9 +202,16 @@ class UploadsController extends BaseController {
         $s3path = 'companyavatars/' . Auth::User()->company['id'];
       }
       
-      // Upload the images to s3
-      $s3 = App::make('aws')->get('s3');
-      $s3->putObject(array(
+        // Instantiate the S3 client with your AWS credentials
+        $s3Client = S3Client::factory(array(
+            'credentials' => array(
+                'key'    => 'AKIAIPJ344NGVS4V3CZA',
+                'secret' => 'XF4j7IMmD1WjzVJ/u+efxWnY5QNBjMsC7uuKzGcs',
+            )
+        ));
+  
+        // Upload the images to s3
+        $s3Client->putObject(array(
         'ACL'                 => 'public-read',
         'Bucket'              => $s3bucket,
         'ContentDisposition'  => 'attachment',

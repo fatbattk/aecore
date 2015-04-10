@@ -1,5 +1,8 @@
 <?php
 
+  namespace App\Models;
+  use Illuminate\Database\Eloquent\Model;
+  
   class Taskattachment extends Model {
     
     protected $table = 'taskattachments';

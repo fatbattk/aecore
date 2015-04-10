@@ -280,13 +280,13 @@
           {!! Form::file("file", ["id" => "file"]) !!}
           <div id="queue" class="queue"><span class="text-muted small">Or drag & drop files here.</span></div>
           <div id="file_id_list"></div>
-          <?php $s3 = App::make('aws')->get('s3'); ?>
+          <?php $s3 = AWS::get('s3'); ?>
           @foreach($attachments as $attachment)
             <div class="attachment-tile" id="attachment-{!! $attachment->file_id !!}">
               <span class="glyphicon glyphicon-remove text-danger small pointer pull-right" title="Remove attachment." onClick="task_remove_attachment('<?php echo $taskdata->code; ?>', '<?php echo $attachment->file_id; ?>');"></span>
-              {!! $basecontroller->display_file_icon($attachment->file_name) !!}
+              {!! $functionscontroller->display_file_icon($attachment->file_name) !!}
               <p class="l1">{!! $attachment->file_name !!}</p>
-              <p class="l2">{!! $basecontroller->formatBytes($attachment->file_size) !!} - <a href="{!! $s3->getObjectUrl($attachment->file_bucket, $attachment->file_path . '/' . $attachment->file_name); !!}" title="Download attachment.">Download</a></p>
+              <p class="l2">{!! $functionscontroller->formatBytes($attachment->file_size) !!} - <a href="{!! $s3->getObjectUrl($attachment->file_bucket, $attachment->file_path . '/' . $attachment->file_name); !!}" title="Download attachment.">Download</a></p>
             </div>
           @endforeach
         </div>
@@ -295,7 +295,7 @@
   {!! Form::close() !!}
 </div>
 <div class="task-info-activity" id="task-comments">
-  <?php $useravatar = new Useravatar; ?>
+  <?php $useravatar = new App\Models\Useravatar; ?>
   @foreach($activitys AS $activity)
   <div class="task-comment">
     <img src="{!! $useravatar->getUserAvatar($activity->user_id, 'sm') !!}" class="avatar_sm" />

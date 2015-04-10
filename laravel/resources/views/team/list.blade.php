@@ -19,7 +19,7 @@
 
   <div class="container-fluid">
     <div class="row">
-      <?php $useravatar = new Useravatar; ?>
+      <?php $useravatar = new App\Models\Useravatar; ?>
       @foreach($members AS $member)
       <div class="col-sm-6 col-md-4 col-lg-3">
         <div class="panel" onmouseover="$('#member_options_<?php echo $member->identifier; ?>').show();" onmouseout="$('#member_options_<?php echo $member->identifier; ?>').hide();">

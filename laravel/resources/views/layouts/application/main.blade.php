@@ -9,6 +9,7 @@
 
     <!-- load js dependencies -->
     <script type="text/javascript" src="{!! asset('/js/jquery.js') !!}"></script>
+    <script type="text/javascript" src="{!! asset('/js/jquery-ui/jquery-ui.js') !!}"></script>
     <script type="text/javascript" src="{!! asset('/js/bootstrap.js') !!}"></script>
     <script type="text/javascript" src="{!! URL::asset('/js/uploadifive/jquery.uploadifive.min.js') !!}"></script>
     <script type="text/javascript">
@@ -23,9 +24,11 @@
     <link rel="shortcut icon" href="{!! asset('/css/img/logos/favicon.ico') !!}">
     <link rel="stylesheet" href="{!! asset('/css/app.css') !!}">
     <link rel="stylesheet" href="{!! asset('/css/app-custom.css') !!}">
+    <link rel="stylesheet" href="{!! asset('/css/bootstrapmod.css') !!}">
     <link rel="stylesheet" href="{!! URL::asset('/js/jquery-ui/css/jquery-ui.css') !!}">
     <link rel="stylesheet" href="{!! URL::asset('/js/uploadifive/uploadifive.css') !!}">
     <link rel="stylesheet" href="{!! URL::asset('/js/jcrop/css/jquery.jcrop.css') !!}">
+    
   </head>
   <body>
     <header class="row">

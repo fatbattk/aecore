@@ -1,5 +1,8 @@
 <?php
 
+  namespace App\Models;
+  use Illuminate\Database\Eloquent\Model;
+
   class Tasklisttask extends Model {
     
     protected $table = 'tasklist_tasks';

@@ -14,8 +14,8 @@
     | http://docs.aws.amazon.com/aws-sdk-php-2/guide/latest/configuration.html
     |
     */
-    'key'    => env('AWS_ACCESS_KEY_ID'),
-    'secret' => env('AWS_SECRET_ACCESS_KEY'),
+    'key'    => env('AKIAIPJ344NGVS4V3CZA'),
+    'secret' => env('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'),
 
     /*
     |--------------------------------------------------------------------------
@@ -28,7 +28,7 @@
     | see: http://docs.aws.amazon.com/general/latest/gr/rande.html
     |
     */
-    'region' => env('AWS_REGION', 'us-east-1'),
+    'region' => env('AWS_REGION', ''),
 
     /*
     |--------------------------------------------------------------------------

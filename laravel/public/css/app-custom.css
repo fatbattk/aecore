@@ -65,7 +65,16 @@ body {
 }
 .navbar-nav > li > a.navbar-link-active {
   color:#DA4B4B;
-  border-bottom:3px solid #F7F7F7;
+  border-bottom:3px solid #DA4B4B;
+  font-weight:bold;
+}
+.navbar-nav > li > a.navbar-link-active:hover {
+  color:#DA4B4B;
+  border-bottom:3px solid #DA4B4B;
+  transition: border-color 0.2s linear;
+      -moz-transition: border-color 0.2s linear;    /* FF3.7+ */
+      -o-transition: border-color 0.2s linear;      /* Opera 10.5 */
+      -webkit-transition: border-color 0.2s linear; /* Saf3.2+, Chrome */
 }
 
 /* Avatars */

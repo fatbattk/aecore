@@ -29,7 +29,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">{!! Session::get('company_name') !!} Users</div>
           <div class="panel-body" style="padding:0;">
-            <?php $useravatar = new Useravatar; ?>
+            <?php $useravatar = new App\Models\Useravatar; ?>
             @foreach($userlist as $user)
               <div class="user-list col-md-6" <?php if($user->id != Auth::User()->id) { ?> onMouseOver="$('#user_settings_<?php echo $user->id; ?>').show();" onMouseOut="$('#user_settings_<?php echo $user->id; ?>').hide();" <?php } ?> >
                 <div class="btn-group pull-right" id="user_settings_{!! $user->id !!}" style="margin-top:5px;display:none;">

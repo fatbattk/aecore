@@ -1,5 +1,14 @@
 <?php
 
+  namespace App\Http\Controllers;
+
+  use Illuminate\Routing\Controller;
+  use Illuminate\Support\Facades\Validator;
+  use Illuminate\Support\Facades\Input;
+  use Illuminate\Support\Facades\Redirect;
+  use Auth;
+  use DB;
+  
 /**
  * @package PHP MapTiler, Simple Map Tiles Generator
  * @version 1.1 (2013.05.13)
@@ -425,7 +434,7 @@ class MaptilerController extends PlanroomController {
 		}
 
     // Save to s3           
-    $s3 = App::make('aws')->get('s3');
+    $s3 = AWS::get('s3');
     $s3->putObject(array(
       'ACL'                 => 'public-read',
       'Bucket'              => 'tiles.aecore.com',

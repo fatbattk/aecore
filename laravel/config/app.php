@@ -140,14 +140,12 @@ return [
 		// Added services
     'Aws\Laravel\AwsServiceProvider',
     'Barryvdh\Debugbar\ServiceProvider',
-    //'Camroncade\Timezone\TimezoneServiceProvider', // uses bridge
 		'Illuminate\Html\HtmlServiceProvider',
     'Intervention\Image\ImageServiceProvider',
     'Intervention\Image\ImageServiceProvider',
     'Monarobase\CountryList\CountryListServiceProvider',
     'Morrislaptop\LaravelFivePackageBridges\ConfigServiceProvider', //bridge
     'Morrislaptop\LaravelFivePackageBridges\Bridges\TimezoneServiceProvider',
-      
       
 		/*
 		 * Application Service Providers...

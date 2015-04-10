@@ -9,7 +9,7 @@
         <button id="onbutton_{!! $member->identifier !!}" class="btn btn-xs {!! $member->onswitch !!}" onClick="toggleDistribution('active','<?php echo $listinfo->code; ?>','<?php echo $member->identifier; ?>');">ON</button>
         <button id="offbutton_{!! $member->identifier !!}" class="btn btn-xs {!! $member->offswitch !!}" onClick="toggleDistribution('disabled','<?php echo $listinfo->code; ?>','<?php echo $member->identifier; ?>');">OFF</button>  
       </div>
-      <?php $useravatar = new Useravatar; ?>
+      <?php $useravatar = new App\Models\Useravatar; ?>
       <img src="{!! $useravatar->getUserAvatar($member->id, 'sm') !!}" class="avatar_sm" />
       <p class="bold">{!! $member->name !!}</p>
       <p class="small light">{!! $member->company_name !!}</p>

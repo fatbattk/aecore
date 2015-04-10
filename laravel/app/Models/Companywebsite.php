@@ -1,5 +1,8 @@
 <?php
 
+  namespace App\Models;
+  use Illuminate\Database\Eloquent\Model;
+
   class Companywebsite extends Model {
     
     protected $table = 'companywebsites';

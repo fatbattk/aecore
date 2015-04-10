@@ -33,7 +33,7 @@ WILL BE MOVING THIS CSS OVER TO app-custom.css ON AN AS NEEDED BASIS!
   width:32px;
   height:16px;
   margin-right:3px;
-  background:url('../images/icons/loader-infinity.gif') 0 -8px no-repeat;
+  background:url('img/icons/loader-infinity.gif') 0 -8px no-repeat;
   display:block;
   float:left;
 }
@@ -195,7 +195,7 @@ a.list-group-item {
   margin:0;
   padding:0;
   position:absolute;
-  top:40px;
+  top:50px;
   right:0;
   bottom:0;
   left:0;
@@ -285,19 +285,19 @@ a.list-group-item {
   width:16px;
   height:16px;
   margin:9px 8px 9px 0;
-  background:url('../images/sprites/checkbox_sprite.png') 0 0 no-repeat;
+  background:url('img/sprites/checkbox_sprite.png') 0 0 no-repeat;
   display:block;
   cursor:pointer;
   float:left;
 }
 .taskline-checkbox:active {
-  background:url('../images/sprites/checkbox_sprite.png') 0 -16px no-repeat;
+  background:url('img/sprites/checkbox_sprite.png') 0 -16px no-repeat;
 }
 .taskline-checkbox-complete {
   width:16px;
   height:16px;
   margin:9px 8px 9px 0;
-  background:url('../images/sprites/checkbox_sprite.png') 0 -32px no-repeat;
+  background:url('img/sprites/checkbox_sprite.png') 0 -32px no-repeat;
   display:block;
   cursor:pointer;
   float:left;
@@ -487,18 +487,18 @@ span.filetype-sprite-small {
   margin:0;
   float:left;
 }
-.filetype-sprite-small.pdf { background:url('../images/sprites/filetype-sprite-small.png') 0 0 no-repeat; }
-.filetype-sprite-small.dwg { background:url('../images/sprites/filetype-sprite-small.png') -18px 0 no-repeat; }
-.filetype-sprite-small.dwx { background:url('../images/sprites/filetype-sprite-small.png') -18px 0 no-repeat; }
-.filetype-sprite-small.xls { background:url('../images/sprites/filetype-sprite-small.png') 0 -24px no-repeat; }
-.filetype-sprite-small.xlsx { background:url('../images/sprites/filetype-sprite-small.png') 0 -24px no-repeat; }
-.filetype-sprite-small.doc { background:url('../images/sprites/filetype-sprite-small.png') -18px -24px no-repeat; }
-.filetype-sprite-small.zip { background:url('../images/sprites/filetype-sprite-small.png') 0 -48px no-repeat; }
-.filetype-sprite-small.txt { background:url('../images/sprites/filetype-sprite-small.png') -18px -48px no-repeat; }
-.filetype-sprite-small.blank { background:url('../images/sprites/filetype-sprite-small.png') -18px -48px no-repeat; }
-.filetype-sprite-small.ppt { background:url('../images/sprites/filetype-sprite-small.png') 0 -72px no-repeat; }
-.filetype-sprite-small.img { background:url('../images/sprites/filetype-sprite-small.png') -18px -72px no-repeat; }
-.filetype-sprite-small.folder { background:url('../images/sprites/filetype-sprite-small.png') 0 -96px no-repeat; }
+.filetype-sprite-small.pdf { background:url('img/sprites/filetype-sprite-small.png') 0 0 no-repeat; }
+.filetype-sprite-small.dwg { background:url('img/sprites/filetype-sprite-small.png') -18px 0 no-repeat; }
+.filetype-sprite-small.dwx { background:url('img/sprites/filetype-sprite-small.png') -18px 0 no-repeat; }
+.filetype-sprite-small.xls { background:url('img/sprites/filetype-sprite-small.png') 0 -24px no-repeat; }
+.filetype-sprite-small.xlsx { background:url('img/sprites/filetype-sprite-small.png') 0 -24px no-repeat; }
+.filetype-sprite-small.doc { background:url('img/sprites/filetype-sprite-small.png') -18px -24px no-repeat; }
+.filetype-sprite-small.zip { background:url('img/sprites/filetype-sprite-small.png') 0 -48px no-repeat; }
+.filetype-sprite-small.txt { background:url('img/sprites/filetype-sprite-small.png') -18px -48px no-repeat; }
+.filetype-sprite-small.blank { background:url('img/sprites/filetype-sprite-small.png') -18px -48px no-repeat; }
+.filetype-sprite-small.ppt { background:url('img/sprites/filetype-sprite-small.png') 0 -72px no-repeat; }
+.filetype-sprite-small.img { background:url('img/sprites/filetype-sprite-small.png') -18px -72px no-repeat; }
+.filetype-sprite-small.folder { background:url('img/sprites/filetype-sprite-small.png') 0 -96px no-repeat; }
 
 /* Autocompelte in modals */
 .ui-autocomplete.ui-front {
@@ -511,12 +511,12 @@ span.filetype-sprite-small {
 }
 .sidebar-wrapper {
   position: fixed;
+  top:50px;
   left: 251px;
   width: 250px;
   height: 100%;
   margin-left: -250px;
   overflow-y: auto;
-  background:#F2F4F7;
   border-right:1px solid #ccc;
   z-index: 1000;
   display:none;

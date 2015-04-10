@@ -168,7 +168,7 @@
         // Project
         $project_data = array (
           'company_id' => Auth::user()->company['id'],
-          'code' => BaseController::RandomString('10'),
+          'code' => Controller::RandomString('10'),
           'status' => Input::get('status'),
           'type' => Input::get('type'),
           'name' => Input::get('name'),

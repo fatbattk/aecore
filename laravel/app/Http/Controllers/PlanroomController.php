@@ -1,6 +1,16 @@
 <?php
 
-class PlanroomController extends BaseController {
+  namespace App\Http\Controllers;
+
+  use Illuminate\Routing\Controller;
+  use Illuminate\Support\Facades\Validator;
+  use Illuminate\Support\Facades\Input;
+  use Illuminate\Support\Facades\Redirect;
+  use Auth;  
+  use DB;
+  use Response;
+  
+class PlanroomController extends Controller {
 
   public function showPlanroom() {
     
@@ -235,7 +245,7 @@ class PlanroomController extends BaseController {
         'user_id' => Auth::User()->id,
         'company_id' => Session::get('company_id'),
         'project_id' => Session::get('project_id'),
-        'set_code' => BaseController::RandomString('15'),
+        'set_code' => Controller::RandomString('15'),
         'set_name' => Input::get('set_name'),
         'set_date' => $datestamp,
         'status' => 'active'
@@ -310,11 +320,11 @@ class PlanroomController extends BaseController {
     $s3bucket = 'tiles.aecore.com';
     // Temp tile location for processing
     $file_location_temp = __DIR__ . '/../../public/uploads';
-    $dir_temp = $file_location_temp . '/' . BaseController::RandomString('15');
+    $dir_temp = $file_location_temp . '/' . Controller::RandomString('15');
     mkdir($dir_temp);
     
     // Make s3 object
-    $s3 = App::make('aws')->get('s3');
+    $s3 = AWS::get('s3');
     
     header( 'Content-type: text/html; charset=utf-8' );
     // Progress bar update
@@ -362,10 +372,10 @@ class PlanroomController extends BaseController {
       // Process the PDF's
       for ($i = 1; $i <= $pagecount; $i++) {
         
-        $sheet_code = Auth::User()->company_id . BaseController::RandomString('13');
+        $sheet_code = Auth::User()->company_id . Controller::RandomString('13');
         
         // Save pdf to s3 for downloading sheets
-        $s3 = App::make('aws')->get('s3');
+        $s3 = AWS::get('s3');
         $s3->putObject(array(
           'ACL'                 => 'public-read',
           'Bucket'              => 'tiles.aecore.com',
@@ -380,7 +390,7 @@ class PlanroomController extends BaseController {
             ->count();
         if($sheetcount > 0) {
           // Pick a new random string, one try
-          $sheet_code = Auth::User()->company_id . BaseController::RandomString('13');;
+          $sheet_code = Auth::User()->company_id . Controller::RandomString('13');;
         }
         
         $sub_dir_temp = $dir_temp . '/' . $sheet_code;
