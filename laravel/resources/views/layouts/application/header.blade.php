@@ -11,7 +11,6 @@
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
   </button>
-
   @if (Auth::check())
     {!! link_to('/projects', '', array('class' => 'navbar-brand')) !!}
   @else
@@ -24,6 +23,7 @@
     <li><a href="/tasks" class="{!! Request::is('tasks*') ? 'navbar-link-active' : 'navbar-link' !!}">Tasks</a>
   </ul>
   <ul class="nav navbar-nav navbar-right">
+    <li><a href="/profile/{!! Auth::user()->identifier !!}" class="navbar-link" title="Profile" data-toggle="tooltip" data-placement="top"><img src="{!! Auth::user()->gravatar !!}" class="avatar_nav" title="{!! Auth::user()->name !!}" /><span class="navbar-username"> {!! Auth::user()->name !!}</span></a></li>
     <li><a href="/settings/profile" class="{!! Request::is('settings*') ? 'navbar-link-active' : 'navbar-link' !!}" title="Settings" data-toggle="tooltip" data-placement="bottom"><span class="glyphicon glyphicon-cog" style="height:19px;top:3px;"></span></a></li>
     <li><a href="/logout" class="navbar-link" title="Log Out" data-toggle="tooltip" data-placement="bottom"><span class="glyphicon glyphicon-log-out" style="height:19px;top:3px;"></span></a></li>
   </ul>

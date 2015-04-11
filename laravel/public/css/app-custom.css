@@ -118,7 +118,13 @@ body {
   max-height:75px;
   margin-bottom:15px;
 }
-
+.avatar_nav {
+  width:28px;
+  height:28px;
+  margin:-5px 5px 0 0;
+  border-radius:14px;
+  float:left;
+}
 @media (max-width: 767px) {
   .navbar-username {
     display:none;
