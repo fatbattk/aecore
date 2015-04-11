@@ -14,8 +14,8 @@
     | http://docs.aws.amazon.com/aws-sdk-php-2/guide/latest/configuration.html
     |
     */
-    'key'    => env('AKIAIPJ344NGVS4V3CZA'),
-    'secret' => env('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'),
+    'key'    => env(''),
+    'secret' => env(''),
 
     /*
     |--------------------------------------------------------------------------
