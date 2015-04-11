@@ -108,7 +108,7 @@
             <div class="form-group">
               {!! Form::label('mobile', 'Mobile #', array('class' => 'col-md-3 col-lg-2 control-label')) !!}
               <div class="col-md-9 col-lg-8">
-                {!! Form::text('mobile', Auth::user()->userphone->mobile, array('class' => 'form-control', 'placeholder' => '(xxx) xxx-xxxx')) !!}
+                {!! Form::text('mobile', @Auth::user()->userphone->mobile, array('class' => 'form-control', 'placeholder' => '(xxx) xxx-xxxx')) !!}
                 <span class="text-danger">{!! $errors->first('mobile') !!}</span>
               </div>
             </div>
@@ -116,7 +116,7 @@
             <div class="form-group">
               {!! Form::label('direct', 'Direct #', array('class' => 'col-md-3 col-lg-2 control-label')) !!}
               <div class="col-md-9 col-lg-8">
-                {!! Form::text('direct', Auth::user()->userphone->direct, array('class' => 'form-control', 'placeholder' => '(xxx) xxx-xxxx')) !!}
+                {!! Form::text('direct', @Auth::user()->userphone->direct, array('class' => 'form-control', 'placeholder' => '(xxx) xxx-xxxx')) !!}
                 <span class="text-danger">{!! $errors->first('direct') !!}</span>
               </div>
             </div>

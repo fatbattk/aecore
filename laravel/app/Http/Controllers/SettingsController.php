@@ -13,6 +13,7 @@
   use Session;
   use View;
   use DB;
+  use Hash;
   
 class SettingsController extends Controller {
 
@@ -50,7 +51,7 @@ class SettingsController extends Controller {
         'direct' => Input::get('direct'),
         'mobile' => Input::get('mobile')
       );
-      Auth::user() -> userphone() -> update($mobile);
+      Auth::user()->userphone()->update($mobile);
               
       return Redirect::to('settings/profile')
               ->with('UpdateSuccess', '<strong>Success!</strong> Your profile information has been updated.');

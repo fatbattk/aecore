@@ -60,19 +60,6 @@ h1.form-name {
   letter-spacing:1px;
 }
 
-/* Page heading */
-.pagehead {
-  padding:15px 0;
-}
-.pagehead h1 {
-  padding:0;
-  margin:0;
-  font-size:20px;
-  font-family:'OpenSans';
-  line-height:30px;
-  color:#777;
-  text-shadow:1px 1px #FFF;
-}
 
 /* Sidebar (custom) */
 .nav-sidebar { 
@@ -118,38 +105,6 @@ h1.form-name {
   text-overflow: ellipsis; 
 }
 
-/* Panels */
-.panel-default > .panel-heading {
-  color:#888;
-  border-bottom:1px solid #ddd;
-  background:#FFF;
-  text-transform: uppercase;
-  font-family:'OpenSans';
-  font-size:0.9em;
-}
-.panel-danger > .panel-heading {
-  font-weight:normal;
-  text-transform: uppercase;
-  font-family:'OpenSans';
-  font-size:0.9em;
-}
-a.list-group-item {
-  padding:12px 10px;
-  font-size:0.9em;
-  line-height:0.9em;
-}
-.list-group-item.selected:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 3px;
-  content: "";
-  background-color: #DA4C4B;
-}
-.list-group-item.selected {
-  color:#DA4C4B;
-}
 
 /* Dropdown Menu */
 .dropdown-menu > li > span {
@@ -589,7 +544,6 @@ span.filetype-sprite-small {
 /* Main content wrapper */
 .page-wrapper {
   position:absolute;
-  top:40px;
   right:0;
   bottom:0;
   left:250px;
