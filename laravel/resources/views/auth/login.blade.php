@@ -12,10 +12,10 @@
     @endif
     
     @if (Session::has('dangerMessage'))
-      <div class="alert alert-danger"><span class="glyphicon glyphicon-alert"></span> {!! Session::get('dangerMessage') !!}</div>
+    <div class="alert alert-danger"><span class="glyphicon glyphicon-alert"></span> {!! Session::get('dangerMessage') !!} <br> {!! link_to('reset', 'Forgot Password?', array('class'=>'btn-link btn-spacer-left')) !!}</div>
     @endif
     @if (Session::has('warningMessage'))
-      <div class="alert alert-warning"><span class="glyphicon glyphicon-alert"></span> {!! Session::get('warningMessage') !!}</div>
+      <div class="alert alert-warning"><span class="glyphicon glyphicon-alert"></span> {!! Session::get('warningMessage') !!} </div>
     @endif
     
     <h4 class="text-muted">Log In</h4>
@@ -32,10 +32,7 @@
     </div>
 
     {!!Form::submit('Log In', array('class' => 'btn btn-success'))!!}
-    {!! link_to('reset', 'Forgot Password?', array('class'=>'btn-link btn-spacer-left')) !!}
-
+    <span class="btn-spacer-left">First time here? {!! link_to('signup', 'Create an Account', array('class'=>'bold')) !!}</span>
     {!! Form::close() !!}
-
-    <div class="alert alert-warning">First time here? {!! link_to('signup', 'Create an Account', array('class'=>'bold')) !!}</div>
   </div>
 @stop

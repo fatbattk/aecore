@@ -24,13 +24,13 @@
               ->where('users.id', '=', $id)
               ->first(array('users.id', 'users.email', 's3files.file_bucket', 's3files.file_path', 's3files.file_name'));
       
-      if($image->file_bucket != null) {
-        $s3 = AWS::get('s3');
-        return $s3->getObjectUrl($image->file_bucket, $image->file_path . '/' . $image->file_name);
-      } else {
+      //if($image->file_bucket != null) {
+      //  $s3 = AWS::get('s3');
+      //  return $s3->getObjectUrl($image->file_bucket, $image->file_path . '/' . $image->file_name);
+      //} else {
         $hash = md5(strtolower(trim($image->email)));
         return 'http://www.gravatar.com/avatar/' . $hash . '?d=identicon';
-      }
+      //}
     }
     
   }

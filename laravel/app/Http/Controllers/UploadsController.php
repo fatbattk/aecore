@@ -40,8 +40,8 @@ class UploadsController extends Controller {
         // Instantiate the S3 client with your AWS credentials
         $s3Client = S3Client::factory(array(
             'credentials' => array(
-                'key'    => 'AKIAIPJ344NGVS4V3CZA',
-                'secret' => 'XF4j7IMmD1WjzVJ/u+efxWnY5QNBjMsC7uuKzGcs',
+                'key'    => '',
+                'secret' => '',
             )
         ));
   
@@ -94,8 +94,8 @@ class UploadsController extends Controller {
         // Instantiate the S3 client with your AWS credentials
         $s3Client = S3Client::factory(array(
             'credentials' => array(
-                'key'    => 'AKIAIPJ344NGVS4V3CZA',
-                'secret' => 'XF4j7IMmD1WjzVJ/u+efxWnY5QNBjMsC7uuKzGcs',
+                'key'    => '',
+                'secret' => '',
             )
         ));
   
@@ -205,8 +205,8 @@ class UploadsController extends Controller {
         // Instantiate the S3 client with your AWS credentials
         $s3Client = S3Client::factory(array(
             'credentials' => array(
-                'key'    => 'AKIAIPJ344NGVS4V3CZA',
-                'secret' => 'XF4j7IMmD1WjzVJ/u+efxWnY5QNBjMsC7uuKzGcs',
+                'key'    => '',
+                'secret' => '',
             )
         ));
   

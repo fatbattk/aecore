@@ -50,10 +50,10 @@ return [
 
 		's3' => [
 			'driver' => 's3',
-			'key'    => 'AKIAIPJ344NGVS4V3CZA',
-			'secret' => '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',
-			'region' => 'us-west-1a',
-			'bucket' => 'aecore-cdn',
+			'key'    => '',
+			'secret' => '',
+			'region' => '',
+			'bucket' => '',
 		],
 
 		'rackspace' => [

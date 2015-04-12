@@ -5,7 +5,6 @@ body {
   height: 100%;
   display: table;
   font-weight: 100;
-  font-family: Aerial, Helvetica, sans-serif;
   background:#EEF0F3;
 }
 
@@ -43,7 +42,7 @@ body {
   .navbar-brand {
     height:30px;
     width:30px;
-    margin:10px 10px 0 0;
+    margin:10px 10px 0 15px;
     background:url('img/logos/aecore-icon.svg') 0 -30px no-repeat;
     display:inline-block;
   }
@@ -143,7 +142,7 @@ body {
   padding:0;
   margin:0;
   font-size:20px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   line-height:30px;
   color:#777;
   text-shadow:1px 1px #FFF;
@@ -151,17 +150,15 @@ body {
 
 /* Panels */
 .panel-default > .panel-heading {
-  color:#888;
+  color:#999;
   border-bottom:1px solid #ddd;
   background:#FFF;
   text-transform: uppercase;
-  font-family: 'Open Sans', sans-serif;
   font-size:0.9em;
 }
 .panel-danger > .panel-heading {
   font-weight:normal;
   text-transform: uppercase;
-  font-family: 'Open Sans', sans-serif;
   font-size:0.9em;
 }
 a.list-group-item {

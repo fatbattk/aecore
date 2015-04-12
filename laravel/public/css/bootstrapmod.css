@@ -260,39 +260,39 @@ h1.form-name {
 
 .btn-3 {
   color: #fff;
-  background-color: #d9534f;
-  border-color: #d43f3a;
+  background-color: #f06658;
+  border-color: #ee5141;
 }
 .btn-3:hover,
 .btn-3:focus,
 .btn-3:active {
   color: #fff;
-  background-color: #c9302c;
-  border-color: #ac2925;
+  background-color: #ed4433;
+  border-color: #dd2614;
 }
 .btn-2 {
   color: #fff;
-  background-color: #f0ad4e;
-  border-color: #eea236;
+  background-color: #fcb145;
+  border-color: #fca62c;
 }
 .btn-2:hover,
 .btn-2:focus,
 .btn-2:active {
   color: #fff;
-  background-color: #ec971f;
-  border-color: #d58512;
+  background-color: #fba01d;
+  border-color: #e78a04;
 }
 .btn-1 {
   color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  background-color: #449bf7;
+  border-color: #2c8ef6;
 }
 .btn-1:hover,
 .btn-1:focus,
 .btn-1:active {
   color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
+  background-color: #1d86f5;
+  border-color: #096fdb;
 }
 
 .taskline-input-wrapper {

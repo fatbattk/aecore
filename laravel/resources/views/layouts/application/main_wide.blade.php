@@ -22,6 +22,7 @@
     
     <!-- load css -->
     <link rel="shortcut icon" href="{!! asset('/css/img/logos/favicon.ico') !!}">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{!! asset('/css/app.css') !!}">
     <link rel="stylesheet" href="{!! asset('/css/app-custom.css') !!}">
     <link rel="stylesheet" href="{!! asset('/css/bootstrapmod.css') !!}">

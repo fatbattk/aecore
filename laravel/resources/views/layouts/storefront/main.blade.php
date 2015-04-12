@@ -13,7 +13,7 @@
 
     <!-- load css -->
     <link rel="shortcut icon" href="{!! asset('/css/img/logos/favicon.ico') !!}">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link href="{!! asset('/css/app.css') !!}" rel="stylesheet">
     <link href="{!! asset('/css/app-custom.css') !!}" rel="stylesheet">
   </head>

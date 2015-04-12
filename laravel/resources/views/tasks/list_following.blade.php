@@ -87,7 +87,7 @@
             <ul class="dropdown-menu task-priority-list">
               <li><a href="{!! URL::to('tasks/priority/3/' . $theirtask->code) !!}"><span class="label label-danger">High Priority</span></a></li>
               <li><a href="{!! URL::to('tasks/priority/2/' . $theirtask->code) !!}"><span class="label label-warning">Medium Priority</span></a></li>
-              <li><a href="{!! URL::to('tasks/priority/1/' . $theirtask->code) !!}"><span class="label label-primary">Low Priority</span></a></li>
+              <li><a href="{!! URL::to('tasks/priority/1/' . $theirtask->code) !!}"><span class="label label-info">Low Priority</span></a></li>
             </ul>
           </div>
         <div class="taskline-input-wrapper">
